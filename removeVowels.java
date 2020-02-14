@@ -17,9 +17,15 @@ public class removeVowels
     {
       char letter = s.charAt(i);
       
+      if(letter == 'A' || letter == 'E' ||letter == 'I' ||letter == 'O' ||letter == 'U')
+      {
+        //if upper case vowel, then remove vowel from the string at the index
+        s.deleteCharAt(i);
+      }
+      
       if(letter == 'a' || letter == 'e' ||letter == 'i' ||letter == 'o' ||letter == 'u')
       {
-        //if vowel, then remove vowel from the string at the index
+        //if lower case vowel, then remove vowel from the string at the index
         s.deleteCharAt(i);
       }
     }
