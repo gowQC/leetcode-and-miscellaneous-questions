@@ -32,7 +32,7 @@ public class removeVowels
     Scanner input = new Scanner(System.in);
     
     //prompt
-    System.out.println("Give a string:);
+    System.out.println("Give a string:");
     StringBuffer sentence = new StringBuffer(input.nextLine());
     input.close();
     System.out.println(checkVowels(sentence));  
