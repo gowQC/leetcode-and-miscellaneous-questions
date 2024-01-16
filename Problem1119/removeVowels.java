@@ -1,3 +1,7 @@
+package Problem1119;
+import java.util.*;
+
+public class removeVowels {
 /*
 Given a string S, remove the vowels 'a', 'e', 'i', 'o', and 'u' from it, and return the new string.
 
@@ -13,10 +17,6 @@ Example 3:
 Input: "aeiou"
 Output: ""
 */
-package Problem1119;
-import java.util.*;
-
-public class removeVowels {
 
   public static StringBuffer checkVowels (StringBuffer s) {
 
