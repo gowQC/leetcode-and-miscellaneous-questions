@@ -45,22 +45,27 @@ public class zigzag {
         *Initial spaces of each row are not counted.
     */
     
-    public static void convert(String s, int numRows) {
+    public static String convert(String s, int numRows) {
+
+        String output = "";
 
         //base case: numRows = 1 or numRows = 2
         if (numRows == 1) {
             System.out.println(s);
+            output = s;
         }
 
         else if(numRows == 2) {
             for(int i=0; i<s.length();i+=2) {
                 System.out.print(s.charAt(i));
+                output = output + s.charAt(i);
                 System.out.print(" ");
             }
             System.out.println();
             System.out.print(" ");
             for(int i=1; i<s.length();i+=2) {
                 System.out.print(s.charAt(i));
+                output = output + s.charAt(i);
                 System.out.print(" ");
             }
         }
@@ -78,6 +83,7 @@ public class zigzag {
             //print first row
             for(int i=0; i<s.length(); i+=total ) {
                 System.out.print(s.charAt(i));
+                output = output + s.charAt(i);
                 for(int j=0; j<spaces; j++) {
                     System.out.print(" "); //print spaces
                 }
@@ -98,15 +104,17 @@ public class zigzag {
                 //print elements
                 while(k<s.length()){
                     System.out.print(s.charAt(k));
+                    output = output + s.charAt(k);
                     for(int x=0;x<high;x++) { //prints out high number of spaces in the row
                         System.out.print(" ");
                         k++;
                     }
                     k++;
-                    if(k>=s.length()){
+                    if(k>=s.length()){ //break to prevent indexoutofbounds error
                         break;
                     }
-                    System.out.print(s.charAt(k)); //index out of bounds error here
+                    System.out.print(s.charAt(k));
+                    output = output + s.charAt(k);
                     for(int x=0;x<low;x++) {//prints out low number of spaces in the 
                         System.out.print(" ");
                         k++;
@@ -130,11 +138,14 @@ public class zigzag {
             //main contents of last row
             for(int i=numRows-1; i<s.length(); i+=total ){   
                 System.out.print(s.charAt(i));
+                output = output + s.charAt(i);
                 for(int j=0; j<spaces; j++) {
                     System.out.print(" "); //print spaces
                 }
             }
-        }        
+        }   
+        System.out.println();
+        return output;     
     }
 
     public static void main (String arg[])
@@ -148,6 +159,6 @@ public class zigzag {
     System.out.println("Give number of desired rows:");
     int rows = input.nextInt();
     input.close();
-    convert(sentence, rows);  
+    System.out.print(convert(sentence, rows));
   }
 }
