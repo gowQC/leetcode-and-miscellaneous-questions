@@ -3,6 +3,8 @@ import java.util.*;
 
 public class removeVowels {
      /*
+      Problem #1119 on leetcode.com:
+      
       Given a string S, remove the vowels 'a', 'e', 'i', 'o', and 'u' from it, and return the new string.
 
       Example 1:

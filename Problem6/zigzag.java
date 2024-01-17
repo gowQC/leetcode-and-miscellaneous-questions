@@ -3,11 +3,14 @@ import java.util.*;
 
 public class zigzag {
      /*
-        This is a modified version of Problem 6. This modified version makes the string more appealing and gives it more detail
-        in the spacing.
+        This is a modified version of Problem #6 on leetcode.com. 
+        
+        This modified version not only displays the zigzag of the entered String,  
+        but it also creates more space between the elements of the String zigzag by 
+        making each character occupy its own unique column (number of columns = String's length).
 
-        For X rows, we need to print X-2 letters as the diagonal letters.
-        To make zigzags, make no letter share the same column.
+        For X rows, we need to print X-2 rows in the middle, which will produce the diagonal effect.
+        To make zigzags, make no letter share the same column. 
 
         PAYPALISHIRING with 1 rows =
             PAYPALISHIRING     //no spaces
@@ -159,6 +162,7 @@ public class zigzag {
     System.out.println("Give number of desired rows:");
     int rows = input.nextInt();
     input.close();
+    System.out.println();
     System.out.print(convert(sentence, rows));
   }
 }
