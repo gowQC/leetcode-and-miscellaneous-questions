@@ -150,9 +150,8 @@ public class zigzag {
         System.out.println();
         return output;     
     }
-
-    public static void main (String arg[])
-  {
+     
+    public static void main (String arg[]) {
     //data needed
     Scanner input = new Scanner(System.in);
     
@@ -164,5 +163,5 @@ public class zigzag {
     input.close();
     System.out.println();
     System.out.print(convert(sentence, rows));
-  }
+    }
 }
