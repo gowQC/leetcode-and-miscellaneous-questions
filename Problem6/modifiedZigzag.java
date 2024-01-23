@@ -1,7 +1,7 @@
 package Problem6;
 import java.util.*;
 
-public class zigzag {
+public class modifiedZigzag {
      /*
         This is a modified version of Problem #6 on leetcode.com. 
         
