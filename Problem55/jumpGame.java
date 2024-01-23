@@ -40,7 +40,7 @@ class jumpGame {
     public static void main (String arg[]) {
         int[] nums1 = new int[] {2,3,0,5};
         int[] nums2 = new int[] {2,1,0,9};
-        int[] nums3 = new int[] {1,1,2,3,2,1,0,0,1,3};
+        int[] nums3 = new int[] {2,2,2,4,2,1,0,0,8,7};
         int[] nums4 = new int[] {1,1,2,5,2,1,0,0,1,3};
         System.out.println(canJump(nums1));
         System.out.println(canJump(nums2));
